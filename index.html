@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale-1.0">
+    <title>Khumbudzo Brandan Ramaru | Data Analyst Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark Blue-Gray Background */
+            color: #E5E7EB; /* Light Gray Text */
+        }
+        .accent-color {
+            color: #38BDF8; /* Sky Blue Accent */
+        }
+        .bg-accent {
+            background-color: #38BDF8;
+        }
+        .card-bg {
+            background-color: #1F2937; /* Lighter Dark Card Background */
+        }
+        .section-title {
+            @apply text-3xl font-bold tracking-tight sm:text-4xl text-white mb-4;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-400 max-w-2xl mx-auto;
+        }
+        /* Timeline specific styles */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.375rem; /* Adjust based on icon size and line position */
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #374151; /* Gray-700 */
+        }
+        .timeline-icon {
+            position: absolute;
+            left: -3rem; /* Adjust to center the icon on the line */
+            top: 0;
+        }
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Hamburger to X animation */
+        .hamburger-top,
+        .hamburger-middle,
+        .hamburger-bottom {
+            transition: all 0.3s;
+        }
+        .menu-open .hamburger-top {
+            transform: rotate(45deg) translateY(6px) translateX(6px);
+        }
+        .menu-open .hamburger-middle {
+            opacity: 0;
+        }
+        .menu-open .hamburger-bottom {
+            transform: rotate(-45deg) translateY(-6px) translateX(6px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-gray-900 bg-opacity-80 backdrop-blur-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-white">KBR</a>
+            <div class="hidden md:flex space-x-6 text-gray-300">
+                <a href="#about" class="hover:text-sky-400 transition">About</a>
+                <a href="#projects" class="hover:text-sky-400 transition">Projects</a>
+                <a href="#journey" class="hover:text-sky-400 transition">Journey</a>
+                <a href="#skills" class="hover:text-sky-400 transition">Skills</a>
+                <a href="#ai-insights" class="hover:text-sky-400 transition">AI Insights</a>
+                <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+            </div>
+            <a href="#resume" class="hidden md:block bg-sky-500 hover:bg-sky-600 text-white font-semibold py-2 px-4 rounded-lg transition">
+                View Resume
+            </a>
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none w-8 h-8 flex flex-col justify-around">
+                     <span class="hamburger-top block w-6 h-0.5 bg-white"></span>
+                     <span class="hamburger-middle block w-6 h-0.5 bg-white"></span>
+                     <span class="hamburger-bottom block w-6 h-0.5 bg-white"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+     <!-- Mobile Menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-black bg-opacity-60 z-30 hidden"></div>
+    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-800 shadow-xl z-40 transform translate-x-full md:hidden">
+        <nav class="flex flex-col p-8 pt-20 space-y-4">
+            <a href="#about" class="mobile-menu-link text-lg text-gray-300 hover:text-sky-400">About</a>
+            <a href="#projects" class="mobile-menu-link text-lg text-gray-300 hover:text-sky-400">Projects</a>
+            <a href="#journey" class="mobile-menu-link text-lg text-gray-300 hover:text-sky-400">Journey</a>
+            <a href="#skills" class="mobile-menu-link text-lg text-gray-300 hover:text-sky-400">Skills</a>
+            <a href="#ai-insights" class="mobile-menu-link text-lg text-gray-300 hover:text-sky-400">AI Insights</a>
+            <a href="#contact" class="mobile-menu-link text-lg text-gray-300 hover:text-sky-400">Contact</a>
+            <a href="#resume" class="mobile-menu-link pt-4 text-lg text-sky-400 hover:text-sky-300">View Resume</a>
+        </nav>
+    </div>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight">
+                    Khumbudzo Brandan Ramaru
+                </h1>
+                <p class="mt-4 text-xl md:text-2xl font-medium text-sky-400">
+                    Data Analyst | Cybersecurity Specialist
+                </p>
+                <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-400">
+                    Transforming complex data into clear, actionable insights. Leveraging a unique cybersecurity perspective to uncover trends and secure data-driven decisions.
+                </p>
+                <div class="mt-8 flex justify-center gap-4">
+                    <a href="#projects" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition">View My Work</a>
+                    <a href="https://www.linkedin.com/in/ramarukb" target="_blank" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition">Connect on LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">
+                    A proactive and analytical professional, certified by Microsoft as a Power BI Data Analyst. My passion lies in solving complex problems by transforming raw data into compelling stories through visualization. My background in cybersecurity provides me with a meticulous, security-first mindset, allowing me to not only analyze data but also understand its inherent risks and value. I thrive on collaborating with stakeholders to deliver solutions that are not only insightful but also robust and secure.
+                </p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">My Projects</h2>
+                    <p class="section-subtitle">Here are some of the projects I've worked on to demonstrate my skills.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Project 1: Power BI Dashboard -->
+                    <div id="project1" class="card-bg rounded-xl overflow-hidden shadow-2xl p-8 transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-bold text-white mb-3">Cybersecurity Attack Analysis Dashboard</h3>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">Power BI</span>
+                            <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">DAX</span>
+                            <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">Power Query</span>
+                        </div>
+                        <p class="text-gray-400 mb-6 project-description">
+                            Analyzed and visualized a cybersecurity dataset to provide actionable insights. Designed an interactive dashboard with custom tooltips, allowing stakeholders to filter and explore attack data by severity, type, and time of day.
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 h-80 flex items-center justify-center text-center text-gray-500">
+                            <p class="text-lg">Interactive Power BI Dashboard <br/> will be embedded here.</p>
+                        </div>
+                        <a href="https://github.com/MrDoltRight/cybersecurity-attack-analysis" target="_blank" class="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition">View on GitHub &rarr;</a>
+                    </div>
+
+                    <!-- Project 2: Python ETL -->
+                    <div id="project2" class="card-bg rounded-xl overflow-hidden shadow-2xl p-8 transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-2xl font-bold text-white mb-3">Python ETL & Data Cleaning Pipeline</h3>
+                         <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
+                            <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">Pandas</span>
+                            <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">ETL</span>
+                        </div>
+                        <p class="text-gray-400 mb-6 project-description">
+                            Developed a Python script using Pandas to perform a full ETL process on a raw sales dataset. The script handles missing values, standardizes formats, and removes over 1,800 duplicate/invalid records to ensure data consistency and accuracy.
+                        </p>
+                        <div class="bg-gray-800 rounded-lg p-4 font-mono text-sm text-gray-300 overflow-x-auto">
+                            <pre><code>import pandas as pd
+
+df = pd.read_csv('sales_data_raw.csv')
+
+df['price'].fillna(df['price'].mean(), inplace=True)
+df['product_name'] = df['product_name'].str.lower()
+df.drop_duplicates(inplace=True)
+df['year'] = pd.to_datetime(df['date']).dt.year
+
+df.to_csv('sales_data_clean.csv', index=False)
+                            </code></pre>
+                        </div>
+                        <a href="https://github.com/MrDoltRight/Python-ETL-Data-Cleaning" target="_blank" class="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Journey Section -->
+        <section id="journey" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">My Career Journey</h2>
+                    <p class="section-subtitle">A brief overview of my professional experience, education, and certifications.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+                    <!-- Timeline -->
+                    <div class="md:col-span-3">
+                        <h3 class="text-2xl font-bold text-white mb-8">Professional Experience</h3>
+                        <div class="relative pl-12">
+                            <!-- Timeline Item 1 -->
+                            <div class="timeline-item pb-12">
+                                <div class="timeline-icon bg-sky-500 rounded-full h-6 w-6 flex items-center justify-center"></div>
+                                <p class="text-sm text-gray-400 mb-1">Oct 2024 - Sep 2025</p>
+                                <h4 class="font-bold text-white text-lg">Junior Cybersecurity Analyst (Learnership)</h4>
+                                <p class="font-medium text-gray-300">Hemmersbach</p>
+                                <p class="text-gray-400 mt-2">Analyzed security alerts and collaborated with senior professionals to maintain secure system configurations, directly contributing to the enhancement of data security and system stability.</p>
+                            </div>
+                            <!-- Timeline Item 2 -->
+                            <div class="timeline-item pb-12">
+                                <div class="timeline-icon bg-sky-500 rounded-full h-6 w-6 flex items-center justify-center"></div>
+                                <p class="text-sm text-gray-400 mb-1">Sep 2023 - Nov 2023</p>
+                                <h4 class="font-bold text-white text-lg">IT Technician Assistant</h4>
+                                <p class="font-medium text-gray-300">XTrader, Johannesburg</p>
+                                <p class="text-gray-400 mt-2">Served as the first point of contact for IT support, resolving over 50 technical issues and performing systematic data backup and restoration to ensure data integrity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education & Certs -->
+                    <div class="md:col-span-2">
+                        <div class="card-bg rounded-xl p-8 mb-8">
+                             <h3 class="text-2xl font-bold text-white mb-4">Education</h3>
+                             <h4 class="font-bold text-white text-lg">Bachelor of Science in Information Technology</h4>
+                             <p class="font-medium text-gray-300">Richfield Graduate Institute of Technology</p>
+                             <p class="text-sm text-gray-400">2021 - 2023</p>
+                        </div>
+                        <div class="card-bg rounded-xl p-8">
+                             <h3 class="text-2xl font-bold text-white mb-6">Certifications</h3>
+                             <div class="space-y-4">
+                                <p><a href="#" class="font-semibold text-sky-400 hover:underline">Microsoft Certified: Power BI Data Analyst</a></p>
+                                <p><a href="#" class="font-semibold text-green-400 hover:underline">Google Cybersecurity Professional Certificate</a></p>
+                                <p><a href="#" class="font-semibold text-red-400 hover:underline">CompTIA A+ Certified Technician</a></p>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 md:py-32 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">My Technical Skills</h2>
+                </div>
+                <div class="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">Power BI</h3></div>
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">Python</h3></div>
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">Pandas</h3></div>
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">SQL</h3></div>
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">ETL</h3></div>
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">Data Visualization</h3></div>
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">Threat Analysis</h3></div>
+                    <div class="p-4 card-bg rounded-lg"><h3 class="text-lg font-semibold text-white">System Admin</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI-Powered Insights Section -->
+        <section id="ai-insights" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="section-title">AI-Powered Insights</h2>
+                    <p class="section-subtitle">Interact with an AI powered by the Gemini API to learn more about my work and capabilities.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+                    <!-- Project Deep Dive -->
+                    <div class="card-bg rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">Project Deep Dive</h3>
+                        <p class="text-gray-400 mb-6">Select a project to get an AI-generated analysis of its challenges, business value, and potential improvements.</p>
+                        <select id="project-select" class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg p-3 mb-4 focus:ring-sky-500 focus:border-sky-500">
+                            <option value="project1">Cybersecurity Attack Analysis Dashboard</option>
+                            <option value="project2">Python ETL & Data Cleaning Pipeline</option>
+                        </select>
+                        <button id="analyze-project-btn" class="w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed">
+                            ✨ Analyze Project
+                        </button>
+                    </div>
+
+                    <!-- Career Simulation -->
+                    <div class="card-bg rounded-xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-4">AI Career Simulation</h3>
+                        <p class="text-gray-400 mb-6">Ask an interview question and get a response from an AI trained on my professional profile.</p>
+                        <input type="text" id="interview-question-input" placeholder="e.g., How do you handle missing data?" class="w-full bg-gray-800 border border-gray-700 text-white rounded-lg p-3 mb-4 focus:ring-sky-500 focus:border-sky-500">
+                        <button id="ask-ai-btn" class="w-full bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-6 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed">
+                            ✨ Ask AI Khumbudzo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="py-20 md:py-32 bg-gray-900">
+             <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">My Resume</h2>
+                <p class="section-subtitle mb-8">
+                    Interested in the full details? You can download my complete resume to learn more about my experience and qualifications.
+                </p>
+                <a href="/cv/Khumbudzo_Brandan_Ramaru_DataCV_P.pdf" target="_blank" class="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition">Download Resume (PDF)</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle mb-8">
+                    I'm currently seeking new opportunities in Data Analysis and Business Intelligence. Feel free to reach out!
+                </p>
+                <a href="mailto:ramarukb@gmail.com" class="text-2xl text-sky-400 hover:text-sky-300 font-semibold transition">ramarukb@gmail.com</a>
+                <div class="mt-8 flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/ramarukb" target="_blank" class="text-gray-400 hover:text-white transition"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" clip-rule="evenodd"/></svg></a>
+                    <a href="https://github.com/MrDoltRight" target="_blank" class="text-gray-400 hover:text-white transition"><svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.378.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.578.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-500">
+            <p>&copy; 2025 Khumbudzo Brandan Ramaru. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- AI Response Modal -->
+    <div id="ai-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4 transition-opacity duration-300 opacity-0 pointer-events-none">
+        <div id="modal-content-wrapper" class="card-bg rounded-xl shadow-2xl w-full max-w-2xl transform transition-all duration-300 scale-95 flex flex-col max-h-[90vh]">
+            <div class="flex justify-between items-center p-6 border-b border-gray-700">
+                <h3 id="modal-title" class="text-2xl font-bold text-white">AI Analysis</h3>
+                <button id="close-modal-btn" class="text-gray-400 hover:text-white text-3xl leading-none">&times;</button>
+            </div>
+            <div id="modal-body" class="prose prose-invert max-w-none text-gray-300 overflow-y-auto p-6"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const mainContent = document.getElementById('main-content');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            function openMenu() {
+                mobileMenuButton.classList.add('menu-open');
+                mobileMenu.classList.remove('translate-x-full');
+                mobileMenuOverlay.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeMenu() {
+                mobileMenuButton.classList.remove('menu-open');
+                mobileMenu.classList.add('translate-x-full');
+                mobileMenuOverlay.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+
+            mobileMenuButton.addEventListener('click', (e) => {
+                e.stopPropagation();
+                if (mobileMenu.classList.contains('translate-x-full')) {
+                    openMenu();
+                } else {
+                    closeMenu();
+                }
+            });
+
+            mobileMenuOverlay.addEventListener('click', closeMenu);
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+
+            const analyzeProjectBtn = document.getElementById('analyze-project-btn');
+            const askAiBtn = document.getElementById('ask-ai-btn');
+            const projectSelect = document.getElementById('project-select');
+            const interviewQuestionInput = document.getElementById('interview-question-input');
+            const modal = document.getElementById('ai-modal');
+            const modalContentWrapper = document.getElementById('modal-content-wrapper');
+            const modalTitle = document.getElementById('modal-title');
+            const modalBody = document.getElementById('modal-body');
+            const closeModalBtn = document.getElementById('close-modal-btn');
+            
+            const apiKey = "";
+            const apiUrl = "/.netlify/functions/gemini"; // Updated for Netlify deployment
+
+            const showModal = (title, content) => {
+                modalTitle.textContent = title;
+                modalBody.innerHTML = content;
+                modal.classList.remove('opacity-0', 'pointer-events-none');
+                modalContentWrapper.classList.remove('scale-95');
+                modalContentWrapper.classList.add('scale-100');
+            };
+
+            const hideModal = () => {
+                modal.classList.add('opacity-0');
+                modalContentWrapper.classList.remove('scale-100');
+                modalContentWrapper.classList.add('scale-95');
+                setTimeout(() => modal.classList.add('pointer-events-none'), 300);
+            };
+
+            closeModalBtn.addEventListener('click', hideModal);
+            modal.addEventListener('click', (e) => e.target === modal && hideModal());
+
+            async function callGemini(payload, buttonElement) {
+                const originalButtonText = buttonElement.innerHTML;
+                buttonElement.disabled = true;
+                buttonElement.innerHTML = `<svg class="animate-spin h-5 w-5 mr-3 inline-block" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>Generating...`;
+
+                let responseText = 'An error occurred. Please try again.';
+                for (let i = 0, delay = 1000; i < 3; i++) {
+                    try {
+                        const response = await fetch(apiUrl, {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(payload)
+                        });
+                        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+                        const result = await response.json();
+                        const candidate = result.candidates?.[0];
+                        if (candidate?.content?.parts?.[0]?.text) {
+                            responseText = marked.parse(candidate.content.parts[0].text);
+                            break;
+                        } else {
+                             responseText = '<p>The AI was unable to generate a response due to safety settings or an empty result.</p>';
+                             break;
+                        }
+                    } catch (error) {
+                        console.error(`Attempt ${i + 1} failed:`, error);
+                        if (i < 2) await new Promise(res => setTimeout(res, delay *= 2));
+                        else responseText = `<p>Sorry, the AI is unable to respond right now.</p><p class="text-xs text-gray-500 mt-2">Error: ${error.message}</p>`;
+                    }
+                }
+                buttonElement.disabled = false;
+                buttonElement.innerHTML = originalButtonText;
+                return responseText;
+            }
+
+            analyzeProjectBtn.addEventListener('click', async () => {
+                const projectId = projectSelect.value;
+                const projectElement = document.getElementById(projectId);
+                const projectTitle = projectElement.querySelector('h3').textContent;
+                const projectDescription = projectElement.querySelector('.project-description').textContent.trim();
+                const userQuery = `Provide a "deep dive" analysis for **Project:** ${projectTitle}, described as: "${projectDescription}". Structure your response in Markdown with these sections: 1. **Key Technical Challenges**, 2. **Business Impact & Value**, and 3. **Potential Next Steps & Improvements**.`;
+                showModal('Analyzing Project...', '<p class="text-center">Please wait...</p>');
+                const analysis = await callGemini({ contents: [{ parts: [{ text: userQuery }] }] }, analyzeProjectBtn);
+                showModal(`Analysis of: ${projectTitle}`, analysis);
+            });
+
+            askAiBtn.addEventListener('click', async () => {
+                const question = interviewQuestionInput.value;
+                if (!question) {
+                    showModal('Error', '<p>Please enter a question.</p>');
+                    return;
+                }
+                const portfolioContext = `My Profile: A proactive and analytical professional, certified Microsoft Power BI Data Analyst with a background in cybersecurity. Skills: Power BI, Python, Pandas, SQL, ETL, Data Visualization, Threat Analysis. Projects: 1. Cybersecurity Attack Analysis Dashboard (Power BI), 2. Python ETL & Data Cleaning Pipeline (Pandas).`;
+                const systemPrompt = `You are Khumbudzo Brandan Ramaru, a confident and articulate Data Analyst. Answer the interview question concisely and professionally, drawing upon the provided context of your skills and projects. Speak from your own perspective using "I".`;
+                const userQuery = `My professional context is: ${portfolioContext}. Now, please answer this interview question: "${question}"`;
+                showModal('Thinking...', '<p class="text-center">Please wait...</p>');
+                const answer = await callGemini({ contents: [{ parts: [{ text: userQuery }] }], systemInstruction: { parts: [{ text: systemPrompt }] }, }, askAiBtn);
+                showModal(`Response to: "${question}"`, answer);
+            });
+        });
+    </script>
+
+</body>
+</html>
+
