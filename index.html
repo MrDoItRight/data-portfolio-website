@@ -138,45 +138,45 @@
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 md:py-32 bg-gray-900">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="section-title">My Projects</h2>
-                    <p class="section-subtitle">Here are some of the projects I've worked on to demonstrate my skills.</p>
+<section id="projects" class="py-20 md:py-32 bg-gray-900">
+    <div class="container mx-auto px-6">
+        <div class="text-center mb-12">
+            <h2 class="section-title">My Projects</h2>
+            <p class="section-subtitle">Here are some of the projects I've worked on to demonstrate my skills.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            
+            <div id="project1" class="card-bg rounded-xl overflow-hidden shadow-2xl p-8 transform hover:-translate-y-2 transition duration-300">
+                <h3 class="text-2xl font-bold text-white mb-3">Cybersecurity Attack Analysis Dashboard</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">Power BI</span>
+                    <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">DAX</span>
+                    <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">Power Query</span>
                 </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Project 1: Power BI Dashboard -->
-                    <div id="project1" class="card-bg rounded-xl overflow-hidden shadow-2xl p-8 transform hover:-translate-y-2 transition duration-300">
-                        <h3 class="text-2xl font-bold text-white mb-3">Cybersecurity Attack Analysis Dashboard</h3>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">Power BI</span>
-                            <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">DAX</span>
-                            <span class="bg-sky-500/20 text-sky-300 text-sm font-semibold px-3 py-1 rounded-full">Power Query</span>
-                        </div>
-                        <p class="text-gray-400 mb-6 project-description">
-                            Analyzed and visualized a cybersecurity dataset to provide actionable insights. Designed an interactive dashboard with custom tooltips, allowing stakeholders to filter and explore attack data by severity, type, and time of day.
-                        </p>
-                        <div class="bg-gray-800 rounded-lg p-4 h-80 flex items-center justify-center text-center text-gray-500">
-                            <p class="text-lg">Interactive Power BI Dashboard <br/> will be embedded here.</p>
-                        </div>
-                        <a href="https://github.com/MrDoltRight/cybersecurity-attack-analysis" target="_blank" class="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition">View on GitHub &rarr;</a>
-                    </div>
+                <p class="text-gray-400 mb-6 project-description">
+                    Analyzed and visualized a cybersecurity dataset to provide actionable insights. Designed an interactive dashboard with custom tooltips, allowing stakeholders to filter and explore attack data by severity, type, and time of day.
+                </p>
+                <div class="bg-gray-800 rounded-lg p-4 h-80">
+                    <img src="./images/Cybersecurity_Attack_Analysis_Dashboard.gif" 
+                        alt="Animated demo of Power BI Dashboard" 
+                        class="w-full h-full object-contain rounded-lg">
+                </div>
+                <a href="https://github.com/MrDoItRight/cybersecurity-attack-analysis" target="_blank" class="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition">View on GitHub &rarr;</a>
+            </div>
 
-                    <!-- Project 2: Python ETL -->
-                    <div id="project2" class="card-bg rounded-xl overflow-hidden shadow-2xl p-8 transform hover:-translate-y-2 transition duration-300">
-                        <h3 class="text-2xl font-bold text-white mb-3">Python ETL & Data Cleaning Pipeline</h3>
-                         <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
-                            <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">Pandas</span>
-                            <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">ETL</span>
-                        </div>
-                        <p class="text-gray-400 mb-6 project-description">
-                            Developed a Python script using Pandas to perform a full ETL process on a raw sales dataset. The script handles missing values, standardizes formats, and removes over 1,800 duplicate/invalid records to ensure data consistency and accuracy.
-                        </p>
-                        <div class="bg-gray-800 rounded-lg p-4 font-mono text-sm text-gray-300 overflow-x-auto">
-                            <pre><code>import pandas as pd
+            <div id="project2" class="card-bg rounded-xl overflow-hidden shadow-2xl p-8 transform hover:-translate-y-2 transition duration-300">
+                <h3 class="text-2xl font-bold text-white mb-3">Python ETL & Data Cleaning Pipeline</h3>
+                 <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">Python</span>
+                    <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">Pandas</span>
+                    <span class="bg-green-500/20 text-green-300 text-sm font-semibold px-3 py-1 rounded-full">ETL</span>
+                </div>
+                <p class="text-gray-400 mb-6 project-description">
+                    Developed a Python script using Pandas to perform a full ETL process on a raw sales dataset. The script handles missing values, standardizes formats, and removes over 1,800 duplicate/invalid records to ensure data consistency and accuracy.
+                </p>
+                <div class="bg-gray-800 rounded-lg p-4 font-mono text-sm text-gray-300 overflow-x-auto">
+                    <pre><code>import pandas as pd
 
 df = pd.read_csv('sales_data_raw.csv')
 
@@ -186,13 +186,33 @@ df.drop_duplicates(inplace=True)
 df['year'] = pd.to_datetime(df['date']).dt.year
 
 df.to_csv('sales_data_clean.csv', index=False)
-                            </code></pre>
-                        </div>
-                        <a href="https://github.com/MrDoltRight/Python-ETL-Data-Cleaning" target="_blank" class="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition">View on GitHub &rarr;</a>
-                    </div>
+                    </code></pre>
                 </div>
+                <a href="https://github.com/MrDoItRight/Python-ETL-Data-Cleaning" target="_blank" class="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition">View on GitHub &rarr;</a>
             </div>
-        </section>
+
+            <div id="project3" class="card-bg rounded-xl overflow-hidden shadow-2xl p-8 transform hover:-translate-y-2 transition duration-300">
+                <h3 class="text-2xl font-bold text-white mb-3">SQL FinTech Trading Database</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-blue-500/20 text-blue-300 text-sm font-semibold px-3 py-1 rounded-full">SQL</span>
+                    <span class="bg-orange-500/20 text-orange-300 text-sm font-semibold px-3 py-1 rounded-full">MySQL</span>
+                    <span class="bg-gray-500/20 text-gray-300 text-sm font-semibold px-3 py-1 rounded-full">Database Design</span>
+                </div>
+                <p class="text-gray-400 mb-6 project-description">
+                    Designed a relational database in MySQL to simulate a trading platform. Wrote complex stored procedures and SQL transactions to securely process 'buy/sell' orders and ensure 100% data integrity.
+                </p>
+                <div class="bg-gray-800 rounded-lg p-4 h-80 flex items-center justify-center">
+                    <img src="./images/views.png" alt="SQL FinTech Database Project" class="object-cover h-full w-full">
+                </div>
+                <a href="https://github.com/MrDoItRight/MySQL-Trading-Platform" target="_blank" class="inline-block mt-6 text-sky-400 font-semibold hover:text-sky-300 transition">
+                View on GitHub &rarr;
+                </a>
+            </div>
+            
+        </div> </div> </section>
+        
+        <!-- https://github.com/MrDoItRight/MySQL-Trading-Platform-->
+        
 
         <!-- Career Journey Section -->
         <section id="journey" class="py-20 md:py-32">
