@@ -6,7 +6,10 @@ exports.handler = async function (event, context) {
   }
 
   const apiKey = process.env.API_KEY; // Securely gets the key from Netlify settings
-  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+  // Use a stable (non-dated) model ID. Dated "preview" IDs get retired and then
+  // return 404 "model not found" from the Gemini API.
+  const MODEL = 'gemini-2.5-flash';
+  const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${apiKey}`;
 
   try {
     const requestBody = JSON.parse(event.body);
