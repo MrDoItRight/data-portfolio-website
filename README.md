@@ -2,9 +2,9 @@
 
 My personal portfolio site, showcasing my data analytics and cybersecurity work. Built as a fast, responsive single-page site and deployed on Netlify.
 
-**Live site:** [kbrdataportfolio.netlify.app](https://kbrdataportfolio.netlify.app/)
+**Live site:** [https://kbr-portfolio.netlify.app/](https://kbr-portfolio.netlify.app/)
 
-![Portfolio preview](images/views.png)
+
 
 ## Overview
 
