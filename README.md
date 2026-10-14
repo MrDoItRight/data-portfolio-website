@@ -1,56 +1,42 @@
-# Data Analyst Portfolio Website
+# Khumbudzo Brandan Ramaru — Portfolio
 
-My personal portfolio site, showcasing my data analytics and cybersecurity work. Built as a fast, responsive single-page site and deployed on Netlify.
+A personal portfolio for cloud engineering, with supporting work in AI, security, IT infrastructure and data analytics. Built with semantic HTML, responsive CSS and a small vanilla JavaScript navigation script. No application build or package installation is required.
 
-**Live site:** [https://kbr-portfolio.netlify.app/](https://kbr-portfolio.netlify.app/)
+## Content
 
+- Selected AWS work: a multi-AZ Terraform network, S3 auto-remediation, and a Bedrock AgentCore warehouse agent.
+- Experience at Rekisa, GenSage, Hemmersbach and XTrader; education and certifications.
+- Earlier data and analytics projects in an expandable section.
+- Three downloadable, one-page CVs: Cloud & DevOps, AI & Cloud, and IT Infrastructure.
+- Email, phone, LinkedIn and GitHub contact links.
 
+The copy and experience dates reflect the three supplied CVs. The AI-assisted website builder is explicitly described as in development. Hosting-cost figures refer to the low-traffic website migrations at Rekisa.
 
-## Overview
+## Project structure
 
-A single-page portfolio built to present my projects, skills, and career journey to recruiters and hiring managers. The design is dark-themed, mobile-responsive, and organized into clear sections: About, Projects, Journey, Skills, AI Insights, and Contact.
-
-## Features
-
-- **Responsive single-page design** with smooth scrolling and a mobile navigation menu.
-- **Projects showcase** linking to my featured work (SQL trading platform, Python ETL pipeline, Power BI cybersecurity dashboard, and more).
-- **AI Insights** an interactive feature powered by Google's Gemini model, letting visitors ask questions and generate summaries about my profile.
-- **Career journey timeline** and a categorized skills breakdown.
-
-## Security Note
-
-The AI Insights feature calls the Gemini API through a **Netlify serverless function** (`netlify/functions/gemini.js`) rather than from the browser. The API key is stored server-side as a Netlify environment variable (`API_KEY`) and never exposed in client-side code, keeping the credential out of the public repository and the user's browser.
-
-## Tech Stack
-
-- **HTML5** and **Tailwind CSS** (via CDN) for structure and styling
-- **JavaScript** for interactivity
-- **Netlify Functions** (Node.js) for the serverless Gemini API proxy
-- **Netlify** for hosting and continuous deployment
-
-## Project Structure
-
-```
-.
-├── index.html              # The full single-page site
-├── netlify.toml            # Netlify build/functions configuration
-├── netlify/
-│   └── functions/
-│       └── gemini.js       # Serverless proxy to the Gemini API
-└── images/                 # Site assets
+```text
+index.html          Page, inline CSS, embedded fonts and navigation script
+images/             Favicon and earlier project screenshots
+fonts/              Original font files and their OFL licences
+resumes/            Three original CV PDFs
+netlify.toml        Netlify function configuration
+netlify/functions/  Existing Gemini proxy, retained for compatibility
 ```
 
-## Running Locally
+The portfolio no longer includes generated career answers or AI-written project summaries. The existing Gemini function is retained, but the page does not call it and does not require an API key. DM Sans and DM Serif Display are embedded in `index.html`; the original files and SIL Open Font License files are kept in `fonts/`. Styling and menu behaviour are inline so standalone HTML previews work without neighbouring CSS or JavaScript files. Arial and Georgia provide fallbacks. The page makes no requests to third-party font or script services. Styling does not depend on Tailwind or a JavaScript CDN.
 
-The site is a static `index.html`, so you can open it directly in a browser for a quick look. To run the serverless function locally as well, use the Netlify CLI:
+## Run locally
+
+From the repository root:
 
 ```bash
-npm install -g netlify-cli
-netlify dev
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
-Set the `API_KEY` environment variable (your Gemini API key) so the AI Insights feature works locally. On the deployed site, this is configured in the Netlify dashboard under Site settings > Environment variables.
+For Netlify-specific development, use `netlify dev`. Testing the retained Gemini function separately requires a server-side `API_KEY`; never put it in browser code or commit it to the repository.
 
-## Author
+## Validation
 
-**Khumbudzo Brandan Ramaru** — Data Analyst | Cybersecurity Specialist
+Check desktop and mobile layouts, including 320px screens. Test menu open/close, Escape and navigation links, the earlier-work disclosure, image loading and each CV download. Content and links remain available without JavaScript, and smooth scrolling respects reduced-motion preferences. Also test the HTML in isolation: block all neighbouring files and verify styling, embedded fonts and the mobile menu still work. Project images and CVs use repository-relative URLs on the deployed site.
+
+The site can be published as static files on Netlify. It does not need a build command. Update the PDFs in `resumes/` when replacing CVs.
